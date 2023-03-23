@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="aula22index.html">
+    <title>Botao JS</title>
+</head>
+<body>
+    <div>
+        <h1>Introdução JavaScript</h1>
+        <div>
+            <h2>Ver Data e Hora</h2>
+            <p>
+                Clique no botão para ver data e hora do sistema
+            </p>
+            <button 
+            onclick="document.getElementById('exibicao').innerHTML = Date()">
+                Veja Data e Hora
+            </button>
+            <!--Para exibir data e hora-->
+            <p id="exibicao"></p>
+        </div>
+        <div>
+            <h2>Transferir Informação com JS</h2>
+            <p id="original">Este paragrafo será copiado para o 
+                paragrafo abaixo do Botão</p>
+                <button onclick="minhaFuncao()">
+                    Clique aqui para Copiar
+                </button>
+                <p id="transferir"></p>
+                <!--https://www.w3schools.com/js/pic_bulbon.gif ligado
+                   apagada https://www.w3schools.com/js/pic_bulboff.gif-->
+        </div>
+        <div>
+            <h2>Ascendendo e Apagando Luz "Editando SRC"</h2>
+            <p>JavaScript pode editar a fonte de imagem.</p>
+            <button onclick="ligar()">Ligar</button>
+            <img id="lampada" src=" https://www.w3schools.com/js/pic_bulboff.gif" alt="Lampada desligada">
+            <button onclick="desligar()">Desligar</button>
+           
+        </div>
+        <div>
+            <h2>Alterando estilo com JS</h2>
+            <p id="pStyle">Este parágrafo será alterado quando o botão abaixo receber um clique.</p>
+            <button onclick="editStyle()">
+                Clique para editar o estilo do parágrafo
+            </button>
+        </div>
+        <div>
+            <h2>Alterando a cor do Fundo</h2>
+            <p id="pMove">
+                Este paragrago nao será alterado.
+            </p>
+            <button onmouseover="move()">
+                Passe o Mouse
+            </button>
+        </div>
+        <div>
+            <h2>Janela de Alerta</h2>
+            <p>Clique no Botao para ver uma mensagem</p>
+            <button onclick="verJanela()">
+                Veja uma mensagem
+            </button>
+        </div>
+        <script>
+            function minhaFuncao(){
+                var x = document.getElementById("original").innerHTML;
+                document.getElementById("transferir").innerHTML = x; 
+            }
+            function ligar(){
+                document.getElementById('lampada').src = "https://www.w3schools.com/js/pic_bulbon.gif";
+            }
+            function desligar(){
+                document.getElementById('lampada').src = " https://www.w3schools.com/js/pic_bulboff.gif"
+            }
+            function editStyle(){
+                document.getElementById('pStyle').style.fontSize = '2em';
+            }
+            function move(){
+                document.getElementById("pMove").style.background = 'Blue';
+            }
+            function verJanela(){
+                window.alert("CSGO SOURCE 2")
+            }
+
+        </script>
+    </div>
+</body>
+</html>
