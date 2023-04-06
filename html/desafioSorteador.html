@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/index.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rell="stylesheet">
+    <link rel="stylesheet" href="../css/desafioSorteador.css ">
+    <title>Desafio</title>
+</head>
+<body>
+    <div>
+
+    </div>
+    <!--
+    <div>
+        <h1>Desafio com JavaScript</h1>
+        <label for="numero">Digite a tabuada que deseja ver</label>
+        <input type="number" id="numero" required>
+        <button onclick="tabuada()">Enviar</button>
+        <div id="result"></div>
+    </div>
+    <div>
+        <p>
+            Este botão recebeu
+            <span id="cliques">0</span>
+            cliques
+        </p>
+        <button onclick="contador()">Clique</button>
+    </div>
+    -->
+    <div class="text-center pt-3">
+        <h1>Bem-vindo Jogador</h1>
+        <p>Escolha um Numero minimo e maximo 
+        para Sortear e Boa Sorte para Adivinhar!</p>
+    </div>
+    <div class="text-center mt-5">
+        <input type="number" id="inicio" required class="rounded-3 m-3 border border-3 border-primary" placeholder="Min">
+        <input type="number" id="fim" required class="rounded-3 m-3 border border-3 border-primary" placeholder="Max">
+        <br>
+        <button type="button" class="btn btn-success m-3" onclick="sorteio()">Sortear</button>
+        <span id="aleatorio"></span>
+    </div>
+</body>
+</html>
