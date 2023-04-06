@@ -17,9 +17,11 @@ function contador(){
 }
 function sorteio(){
     let sorteio = document.getElementById("inicio").value;
+    let min = parseInt(sorteio);
     let sorteioFim = document.getElementById("fim").value;
+    let max = parseInt(sorteioFim);
 
-    let result = Math.floor((Math.random() * (sorteioFim-sorteio +1)) + sorteio);
+    let result = Math.floor((Math.random() * (max-min +1)) + min);
     document.getElementById("aleatorio").innerHTML = result;
 }
 
