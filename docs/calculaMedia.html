@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rell="stylesheet">
+    <link rel="stylesheet" href="calculaMedia.css">
+    <title>Media</title>
+    <script>
+        function calculaMedia(){
+            const nome = document.getElementById("nome").value;
+            const nota1 = Number(document.getElementById("nota1").value);
+            const nota2 = Number(document.getElementById("nota2").value);
+            const nota3 = Number(document.getElementById("nota3").value);
+            const nota4 = Number(document.getElementById("nota4").value);
+
+            const result = (nota1 + nota2 + nota3 + nota4) / 4;
+
+            if ( result  >=  6 ) {
+                console.log ( `O aluno ${nome} está aprovado!` ) ;
+                document.getElementById('resultado').style.backgroundColor = 'green';
+            }else if ( result  >=  2.1  &&  result  <=  5.9 ) {
+                console.log ( `O aluno ${nome} está de Recuperação!` );
+                document.getElementById('resultado').style.backgroundColor = 'blue';
+            }else {
+                console.log ( `O aluno ${nome} está Reprovado!` );
+                document.getElementById('resultado').style.backgroundColor = 'red';
+            }
+             document.getElementById("resultado").innerHTML = result;
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <form>
+            <label for="">Nome do Aluno:</label>
+            <input type="text" id="nome">
+
+            <label for="">Nota 1:</label>
+            <input type="text" id="nota1">
+
+            <label for="">Nota 2:</label>
+            <input type="text" id="nota2">
+
+            <label for="">Nota 3:</label>
+            <input type="text" id="nota3">
+
+            <label for="">Nota 4:</label>
+            <input type="text" id="nota4">
+            <button type="button" onclick="calculaMedia()">Calcular</button>
+            <br>
+            <span id="resultado"></span>
+        </form>
+    </div>
+</body>
+</html>
