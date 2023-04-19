@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/aula12De04index.css">
+    <script src="../js/aula12De04index.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Formularios e JavaScript</h1>
+    </div>
+    <div>
+        <h2>Capturando valores de Radio</h2>
+        <p>
+            Selecione um radio button e clique em enviar
+        </p>
+        <p>Genero:
+        <input type="radio" name="gender" value="Masculino">Masculino
+        <input type="radio" name="gender" value="Feminino">Feminino
+        <input type="radio" name="gender" value="Outro">Outro
+        </p>
+        <button onclick="displayRadioValue()">Enviar</button>
+        <div id="radioResult"></div>
+    </div>
+    <div>
+      <h2>Qual elemento de uma lista foi selecionado</h2>  
+      <p>Selecione uma das opções de plano: 
+        <select  id="select1">
+            <option value="Free">Free</option>
+            <option value="Basic">Basic</option>
+            <option value="Premium">Premium</option>
+        </select>
+      </p>
+      <p>O plano selecionado é
+        <span class="result"> </span>.
+    </p>
+    <button onclick="getOption()">Clique Para ver o Plano selecionado</button>
+    </div>
+    <div>
+        <h2>Elementos CheckBox</h2>
+        <p>Quais são as suas prioridades?</p>
+        <p>Trabalho
+            <input type="checkbox" value="Trabalho">
+        </p>
+        <p>Saude
+            <input type="checkbox" value="Saude">
+        </p>
+        <p>Estudos
+            <input type="checkbox" value="Estudos">
+        </p>
+        <button onclick="getCheckBox()">Enviar</button>
+        <p>
+            Minhas Prioridades são <span id="pri"></span>
+        </p>
+    </div>
+</body>
+</html>
