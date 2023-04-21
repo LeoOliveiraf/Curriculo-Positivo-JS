@@ -18,40 +18,48 @@
             const result = (nota1 + nota2 + nota3 + nota4) / 4;
 
             if ( result  >=  6 ) {
-                console.log ( `O aluno ${nome} está aprovado!` ) ;
                 document.getElementById('resultado').style.backgroundColor = 'green';
             }else if ( result  >=  2.1  &&  result  <=  5.9 ) {
-                console.log ( `O aluno ${nome} está de Recuperação!` );
                 document.getElementById('resultado').style.backgroundColor = 'blue';
             }else {
-                console.log ( `O aluno ${nome} está Reprovado!` );
                 document.getElementById('resultado').style.backgroundColor = 'red';
             }
              document.getElementById("resultado").innerHTML = result;
         }
     </script>
 </head>
-<body>
-    <div>
-        <form>
-            <label for="">Nome do Aluno:</label>
-            <input type="text" id="nome">
-
-            <label for="">Nota 1:</label>
-            <input type="text" id="nota1">
-
-            <label for="">Nota 2:</label>
-            <input type="text" id="nota2">
-
-            <label for="">Nota 3:</label>
-            <input type="text" id="nota3">
-
-            <label for="">Nota 4:</label>
-            <input type="text" id="nota4">
-            <button type="button" onclick="calculaMedia()">Calcular</button>
+<body class="bg-secondary">
+        <div class="my-5">
+            <div style="display: flex; justify-content: center; text-align: center;">
+            <label for="" class="px-2"><h4>Nome do Aluno:</h4></label>
+            <input type="text" id="nome" required class="rounded border border-2 border-dark"  placeholder="Seu Nome">
+            </div>
             <br>
-            <span id="resultado"></span>
-        </form>
+        <div style="text-align: center; justify-content: center; display: flex;">
+        <div class="card text-white bg-dark mb-2 " style="max-width: 18rem; ">
+            <div class="card-body " >
+              <h5 class="card-title">--DIGITE AS NOTAS--</h5>
+              <p class="card-text">
+                <label for="" class="m-0"><h5>Nota 4:</h5></label>
+                <input type="number" id="nota4" required class="rounded border border-2 border-success"  placeholder="Valor Nota">
+                
+                <label for="" class="m-1"><h5>Nota 1:</h5></label>
+                <input type="number" id="nota1" required class="rounded border border-2 border-success" placeholder="Valor Nota">
+                
+                <label for="" class="m-1"><h5>Nota 2:</h5></label>
+                <input type="number" id="nota2" required class="rounded border border-2 border-success"  placeholder="Valor Nota">
+                
+                <label for="" class="m-1"><h5>Nota 3:</h5></label>
+                <input type="number" id="nota3" required class="rounded border border-2 border-success"  placeholder="Valor Nota">
+                
+            </p>
+            <span id="resultado" style="text-align: center; justify-content: center; display: flex;" class="p-1 rounded">0</span>
+            </div>
+        </div>
     </div>
+
+    <div style="text-align: center; justify-content: center; display: flex;">
+        <button type="button" onclick="calculaMedia()" class="btn btn-success btn-lg mt-3">Calcular</button>
+    </div>       
 </body>
 </html>
